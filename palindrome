@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Palindrome 
+{
+
+	public static void main(String[] args)
+	{
+		 Scanner sc=new Scanner(System.in);
+		 String str1;
+		 System.out.println("Enter a string");
+		 str1=sc.nextLine();
+		 System.out.println(str1);
+		 
+		 int len=str1.length();
+		 
+		 String rev= "";
+		 for(int i=len-1;i>=0;i--)
+			 
+		 {
+			 rev =rev+str1.charAt(i);
+			 
+		 }
+		 if (str1.equals(rev))
+			 
+		 {
+			 System.out.println(rev +"is Palindrome");
+		 }
+		 else 
+		 {
+			 System.out.println(rev +"is not Palindrome");
+		 }
+	}
+}
+ 
+		 
+		 
+    
+	
+
+
