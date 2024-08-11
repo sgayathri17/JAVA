@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class MatrixMultiplication 
+{
+
+	public static void main(String[] args)
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number of rows of Matrix A:");
+	  int rows1=sc.nextInt();
+
+	System.out.println("Enter the number of columns of Matrix A:");
+	  int cols1=sc.nextInt();
+	  System.out.println("Enter the number of rows of Matrix B");
+	  int rows2=sc.nextInt();
+
+	System.out.println("Enter the number of columns of Matrix B:");
+	  int cols2=sc.nextInt();
+	  if (cols1!= rows2)
+	  {
+		  System.out.println("Matrix multiplication is not possible.");
+	  return;
+	  }
+	  
+	int[][]matrixA=new int [5][5];
+	System.out.println(rows1+" "+cols1);
+	System.out.println("Enter the elements:");
+	for(int i=0;i<rows1;i++)
+	{
+		for(int j=0;j<cols1;j++)
+		{
+			matrixA[i][j]=sc.nextInt();
+		}
+	}
+	
+	  
+	int[][]matrixB=new int [5][5];
+	System.out.println("Enter the elements:");
+	for(int i=0;i<rows2;i++)
+	{
+		for(int j=0;j<cols2;j++)
+		{
+			matrixB[i][j]=sc.nextInt();
+		}
+	}
+	
+	int [][]matrixC=new int[5][5];
+	for(int i=0;i<rows1;i++)
+	{
+		for(int j=0;j<cols2;j++)
+		{
+			matrixC[i][j]=0;
+			
+			for(int k=0;k<cols1;k++)
+			{
+				matrixC[i][j]+=matrixA[i][k] * matrixB[k][j];
+			}}}
+			System.out.println("Marix Multiplication is:");
+			for(int i=0;i<rows1;i++)
+			{
+				for(int j=0;j<cols2;j++)
+				{
+					System.out.print(matrixC[i][j]+" ");	
+					
+				}
+				System.out.print("\n");
+			}
+	
+	}
+}
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
